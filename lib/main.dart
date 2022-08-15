@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:proje_ders_notu_hesaplama/noteDetailScreen.dart';
 import 'package:proje_ders_notu_hesaplama/noteRecordScreen.dart';
 import 'package:proje_ders_notu_hesaplama/notlar.dart';
+import 'package:proje_ders_notu_hesaplama/notlardao.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,14 +36,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   Future<List<Notlar>> tumNotlarGoster() async{
-    var notlarListesi=<Notlar>[];
-    var n1=Notlar(1, "Tarih", 33, 27);
-    var n2=Notlar(1, "Kimya", 100, 40);
-    var n3=Notlar(1, "Fizik", 5, 5);
-
-    notlarListesi.add(n1);
-    notlarListesi.add(n2);
-    notlarListesi.add(n3);
+    var notlarListesi= await Notlardao().tumNotlar();
 
     return notlarListesi;
   }
@@ -80,7 +74,7 @@ class _HomePageState extends State<HomePage> {
                   return Text("Ortalama: $ortalama",style: TextStyle(fontSize: 15),);
 
                 }else{
-                  return Text("Ortalam: ", style: TextStyle(fontSize: 15),);
+                  return Text("Ortalama: ", style: TextStyle(fontSize: 15),);
                 }
               },
             ),
