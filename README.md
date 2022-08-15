@@ -1,6 +1,5 @@
 # proje_ders_notu_hesaplama
-
-![1](https://user-images.githubusercontent.com/84284375/184629649-f1e54c67-df83-4ee0-89b0-0bb70be379b3.png)
-![2](https://user-images.githubusercontent.com/84284375/184629652-795eece7-a5e1-4c7f-80cd-84518bf9228d.png)
-![3](https://user-images.githubusercontent.com/84284375/184629656-baf7eaf5-9d0d-4632-8c50-0ee6aadded6c.png)
-![4](https://user-images.githubusercontent.com/84284375/184629658-7b0b7fd8-00a2-4a84-8bd6-69c5f5efd464.png)
+![1](https://user-images.githubusercontent.com/84284375/184629728-8fdcd9a4-b901-4031-b234-9187f40a695b.png)
+![2](https://user-images.githubusercontent.com/84284375/184629733-ff5865de-8dee-4483-81a8-e68fa63a27c6.png)
+![3](https://user-images.githubusercontent.com/84284375/184629742-2e270e0f-0a39-41cb-bf5c-052c1499a494.png)
+![4](https://user-images.githubusercontent.com/84284375/184629750-65f69203-511f-4c29-b2a2-f628557f942c.png)
