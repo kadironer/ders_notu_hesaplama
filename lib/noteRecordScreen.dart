@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:proje_ders_notu_hesaplama/main.dart';
+import 'package:proje_ders_notu_hesaplama/notlardao.dart';
 
 class NoteRecordPage extends StatefulWidget {
   const NoteRecordPage({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class _NoteRecordPageState extends State<NoteRecordPage> {
   var tfNot2=TextEditingController();
 
   Future<void> dersKayit(String ders_adi, int not1, int not2) async{
-    print("$ders_adi, $not1, $not2, kayıt edildi");
+    await Notlardao().notEkle(ders_adi, not1, not2);
     Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));
   }
 

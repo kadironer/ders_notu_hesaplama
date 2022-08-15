@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:proje_ders_notu_hesaplama/main.dart';
 import 'package:proje_ders_notu_hesaplama/notlar.dart';
+import 'package:proje_ders_notu_hesaplama/notlardao.dart';
 
 class NoteDetailsPage extends StatefulWidget {
 
@@ -18,13 +19,13 @@ class _NoteDetailsPageState extends State<NoteDetailsPage> {
   var tfNot2=TextEditingController();
 
   Future<void> notSil(int not_id) async{
-    print("$not_id silindi");
+    await Notlardao().notSil(not_id);
     Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));
 
   }
 
   Future<void> notGuncelle(int not_id, String ders_adi, int not1, int not2) async{
-    print("$ders_adi, $not1, $not2, güncellendi");
+    await Notlardao().notGuncelle(not_id, ders_adi, not1, not2);
     Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));
 
   }
@@ -44,13 +45,14 @@ class _NoteDetailsPageState extends State<NoteDetailsPage> {
         title: Text("Notlar Detay"),
         actions: [
          TextButton(
-           child: Text("Sil"),
+           child: Text("Sil", style: TextStyle(color: Colors.black),),
            onPressed:(){
+
              notSil(widget.not.not_id);
            },
          ),
           TextButton(
-            child: Text("Güncelle"),
+            child: Text("Güncelle", style: TextStyle(color: Colors.black),),
             onPressed:(){
               notGuncelle(widget.not.not_id, tfDers.text, int.parse(tfNot1.text), int.parse(tfNot2.text));
             },
